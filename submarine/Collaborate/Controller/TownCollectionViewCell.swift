@@ -22,12 +22,9 @@ class TownCollectionViewCell: UICollectionViewCell {
                     townVC.townName = name
                     townVC.townDescription = description
                     townVC.townRandomCode = code
-                    // UINavigationController를 사용하여 화면 전환
-                    if let navigationController = collaborateVC.navigationController {
-                        navigationController.pushViewController(townVC, animated: true)
-                    }
+                    collaborateVC.present(townVC, animated: true, completion: nil)
+                }
                 }
             }
         }
     }
-}

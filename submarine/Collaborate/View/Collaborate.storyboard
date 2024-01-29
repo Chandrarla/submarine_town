@@ -18,19 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m03-19-rh4">
-                                <rect key="frame" x="0.0" y="59" width="54" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m03-19-rh4">
+                                <rect key="frame" x="20" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1cQ-Ag-ZJd"/>
+                                    <constraint firstAttribute="width" constant="50" id="Xkm-6g-Gqv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icon_Back"/>
                                 <connections>
                                     <action selector="collaborateBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FdS-Qo-92g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="타운" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-h1-WRq">
-                                <rect key="frame" x="171" y="62" width="50" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타운" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9m-h1-WRq">
+                                <rect key="frame" x="173" y="78" width="47" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,32 +47,28 @@
                                     <color key="baseForegroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Tx3-MH-0jC" kind="presentation" id="xF6-yd-WiM"/>
+                                    <action selector="addInvitedTownClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EZ6-yo-6F1"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="guq-xx-2lJ">
-                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="guq-xx-2lJ">
+                                <rect key="frame" x="40" y="169" width="313" height="514"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="2K1-xg-urJ"/>
-                                    <constraint firstAttribute="width" constant="300" id="BZf-qk-HGY"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lfW-To-uGf">
-                                    <size key="itemSize" width="85" height="82"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lfW-To-uGf">
+                                    <size key="itemSize" width="95" height="95"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="wtN-b9-2vf" customClass="TownCollectionViewCell" customModule="submarine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e4G-ve-oxo">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="82"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vUM-XP-h8J">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-xh-aIx">
-                                                    <rect key="frame" x="9" y="8" width="68" height="52"/>
+                                                    <rect key="frame" x="4" y="0.0" width="87" height="87"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="">
@@ -84,9 +82,9 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upM-P7-P7O">
-                                                    <rect key="frame" x="22" y="61" width="42" height="21"/>
+                                                    <rect key="frame" x="17" y="28" width="61" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -94,7 +92,7 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="85" height="82"/>
+                                        <size key="customSize" width="95" height="95"/>
                                         <connections>
                                             <outlet property="townButton" destination="bQR-xh-aIx" id="c3n-eT-Ash"/>
                                             <outlet property="townName" destination="upM-P7-P7O" id="tIj-JK-C7P"/>
@@ -106,9 +104,12 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="My3-bL-c7z"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-iV-EB7">
-                                <rect key="frame" x="292" y="71" width="54" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-iV-EB7">
+                                <rect key="frame" x="313" y="69" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Gd4-eL-D1E"/>
+                                    <constraint firstAttribute="height" constant="50" id="psg-kb-vps"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icon_plus" title="">
                                     <backgroundConfiguration key="background">
@@ -124,8 +125,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="guq-xx-2lJ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5To-Kc-fGx"/>
-                            <constraint firstItem="guq-xx-2lJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Edr-pa-GHx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A9C-iV-EB7" secondAttribute="trailing" constant="30" id="8mk-mI-FDM"/>
+                            <constraint firstItem="m03-19-rh4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Htk-vR-zLi"/>
+                            <constraint firstItem="guq-xx-2lJ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Ps8-8K-Jml"/>
+                            <constraint firstItem="guq-xx-2lJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Urb-H2-ezo"/>
+                            <constraint firstItem="E9m-h1-WRq" firstAttribute="centerY" secondItem="A9C-iV-EB7" secondAttribute="centerY" id="akB-d1-3pT"/>
+                            <constraint firstItem="guq-xx-2lJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gBS-CC-bNj"/>
+                            <constraint firstItem="m03-19-rh4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="m0n-sM-biG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="guq-xx-2lJ" secondAttribute="trailing" constant="40" id="n9s-rb-dX9"/>
+                            <constraint firstItem="A9C-iV-EB7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="qH5-fK-qWx"/>
+                            <constraint firstItem="guq-xx-2lJ" firstAttribute="top" secondItem="m03-19-rh4" secondAttribute="bottom" constant="50" id="qbn-W0-L45"/>
+                            <constraint firstItem="E9m-h1-WRq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="us3-DH-vcx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -228,7 +238,7 @@
             <objects>
                 <viewController storyboardIdentifier="addInvitedTownViewController" id="Tx3-MH-0jC" customClass="AddInvitedTownViewController" customModule="submarine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k2P-Ux-Jxr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jV-56-ewQ">

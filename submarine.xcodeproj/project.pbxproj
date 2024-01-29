@@ -30,7 +30,9 @@
 		18F086042B4136EF003D37AF /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F086032B4136EF003D37AF /* CustomViewController.swift */; };
 		18F086072B441747003D37AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F086062B441747003D37AF /* LoginViewController.swift */; };
 		2E21DB362B662D990022FBC4 /* TownCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21DB352B662D990022FBC4 /* TownCollectionViewCell.swift */; };
-		2E76CC6B2B5DF255003722A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E76CC6A2B5DF255003722A3 /* GoogleService-Info.plist */; };
+		2E21DB392B66B9800022FBC4 /* TownDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21DB382B66B9800022FBC4 /* TownDataModel.swift */; };
+		2E21DB3B2B66B9BE0022FBC4 /* TownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21DB3A2B66B9BE0022FBC4 /* TownManager.swift */; };
+		2E66B98C2B67637F00503E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E66B98B2B67637F00503E20 /* GoogleService-Info.plist */; };
 		2E76CC6D2B5DF788003722A3 /* TownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76CC6C2B5DF788003722A3 /* TownViewController.swift */; };
 		2E76CC6F2B5DF794003722A3 /* Town.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E76CC6E2B5DF794003722A3 /* Town.storyboard */; };
 		2E76CC752B5DFC82003722A3 /* AddTownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76CC742B5DFC82003722A3 /* AddTownViewController.swift */; };
@@ -66,7 +68,9 @@
 		18F086032B4136EF003D37AF /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		18F086062B441747003D37AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E21DB352B662D990022FBC4 /* TownCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownCollectionViewCell.swift; sourceTree = "<group>"; };
-		2E76CC6A2B5DF255003722A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2E21DB382B66B9800022FBC4 /* TownDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownDataModel.swift; sourceTree = "<group>"; };
+		2E21DB3A2B66B9BE0022FBC4 /* TownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownManager.swift; sourceTree = "<group>"; };
+		2E66B98B2B67637F00503E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E76CC6C2B5DF788003722A3 /* TownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownViewController.swift; sourceTree = "<group>"; };
 		2E76CC6E2B5DF794003722A3 /* Town.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Town.storyboard; sourceTree = "<group>"; };
 		2E76CC742B5DFC82003722A3 /* AddTownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTownViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 		18F085B12B4124D1003D37AF = {
 			isa = PBXGroup;
 			children = (
-				2E76CC6A2B5DF255003722A3 /* GoogleService-Info.plist */,
+				2E66B98B2B67637F00503E20 /* GoogleService-Info.plist */,
 				18F085BC2B4124D1003D37AF /* submarine */,
 				18F085BB2B4124D1003D37AF /* Products */,
 				98CBB8D36EA9B564CDEB7614 /* Pods */,
@@ -159,14 +163,9 @@
 		18F085E82B4133B1003D37AF /* Collaborate */ = {
 			isa = PBXGroup;
 			children = (
-				18F085EE2B4135A2003D37AF /* Collaborate.storyboard */,
-				18F086012B4136DE003D37AF /* CollaborateViewController.swift */,
-				2E76CC742B5DFC82003722A3 /* AddTownViewController.swift */,
-				2E76CC762B5DFC90003722A3 /* AddInvitedTownViewController.swift */,
-				2E76CC6E2B5DF794003722A3 /* Town.storyboard */,
-				2E76CC6C2B5DF788003722A3 /* TownViewController.swift */,
-				2E76CC782B5DFFFF003722A3 /* InviteViewController.swift */,
-				2E21DB352B662D990022FBC4 /* TownCollectionViewCell.swift */,
+				2E21DB3D2B66BD230022FBC4 /* View */,
+				2E21DB3C2B66BD010022FBC4 /* Controller */,
+				2E21DB372B66B9640022FBC4 /* Model */,
 			);
 			path = Collaborate;
 			sourceTree = "<group>";
@@ -213,6 +212,37 @@
 				18F086062B441747003D37AF /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2E21DB372B66B9640022FBC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E21DB382B66B9800022FBC4 /* TownDataModel.swift */,
+				2E21DB3A2B66B9BE0022FBC4 /* TownManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E21DB3C2B66BD010022FBC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E76CC6C2B5DF788003722A3 /* TownViewController.swift */,
+				2E76CC782B5DFFFF003722A3 /* InviteViewController.swift */,
+				2E21DB352B662D990022FBC4 /* TownCollectionViewCell.swift */,
+				18F086012B4136DE003D37AF /* CollaborateViewController.swift */,
+				2E76CC742B5DFC82003722A3 /* AddTownViewController.swift */,
+				2E76CC762B5DFC90003722A3 /* AddInvitedTownViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E21DB3D2B66BD230022FBC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F085EE2B4135A2003D37AF /* Collaborate.storyboard */,
+				2E76CC6E2B5DF794003722A3 /* Town.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		62FBF79985C104B7CCF2AFC0 /* Frameworks */ = {
@@ -298,11 +328,11 @@
 				2E76CC6F2B5DF794003722A3 /* Town.storyboard in Resources */,
 				18F085EF2B4135A2003D37AF /* Collaborate.storyboard in Resources */,
 				18F085CD2B4124D2003D37AF /* LaunchScreen.storyboard in Resources */,
+				2E66B98C2B67637F00503E20 /* GoogleService-Info.plist in Resources */,
 				18F085CA2B4124D2003D37AF /* Assets.xcassets in Resources */,
 				18F085C52B4124D1003D37AF /* Main.storyboard in Resources */,
 				18F085F62B413639003D37AF /* Store.storyboard in Resources */,
 				18F085F42B4135FC003D37AF /* Challenge.storyboard in Resources */,
-				2E76CC6B2B5DF255003722A3 /* GoogleService-Info.plist in Resources */,
 				18F085ED2B41357E003D37AF /* Custom.storyboard in Resources */,
 				18F085F82B413653003D37AF /* Settings.storyboard in Resources */,
 			);
@@ -358,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F086072B441747003D37AF /* LoginViewController.swift in Sources */,
+				2E21DB392B66B9800022FBC4 /* TownDataModel.swift in Sources */,
 				18F086002B4136CE003D37AF /* SubmarineViewController.swift in Sources */,
 				18F085E32B4132D3003D37AF /* CalendarViewController.swift in Sources */,
 				2E76CC792B5DFFFF003722A3 /* InviteViewController.swift in Sources */,
@@ -373,6 +404,7 @@
 				18F085FA2B41366D003D37AF /* SettingsViewController.swift in Sources */,
 				18F085FC2B4136A7003D37AF /* StoreViewController.swift in Sources */,
 				2E76CC6D2B5DF788003722A3 /* TownViewController.swift in Sources */,
+				2E21DB3B2B66B9BE0022FBC4 /* TownManager.swift in Sources */,
 				2E76CC772B5DFC90003722A3 /* AddInvitedTownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
